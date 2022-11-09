@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Lightning Out Test</test>
-    <script type="text/javascript" src="https://bicx--dev.sandbox.my.site.com/lightning/lightning.out.delegate.js?v=1667983395033"></script>
-  </head>
-  <body>
-    <div data-lightning-out="true"></div>
-    <h1>Test</h1>
-    <div id="lightning"></div>
-    <script src="https://bicx--dev.sandbox.my.site.com/lightning/lightning.out.js"></script>
-    <script>
-      const appName = 'c:LightningOutTest';
-      const componentName 'c:hiWorld';
-      const lightningEndPoint = 'https://bicx--dev.sandbox.my.site.com';
-      // Target element er dom element componenten skal henges på
-      const targetElement = 'lightning';
-      const componentAttributes = {};
+<head>
+  <meta charset="UTF-8">
+  <title>Lightning Out Test</test>
+  <script type="text/javascript" src="https://bicx--dev.sandbox.my.site.com/lightning/lightning.out.delegate.js?v=1667983395033"></script>
+</head>
+<body>
+   <div data-lightning-out="true"></div>
+  <h1>Test</h1>
+  <div id="lightning"></div>
+  <script src="https://bicx--dev.sandbox.my.site.com/lightning/lightning.out.js"></script>
+  <script>
+    const appName = 'c:LightningOutTest';
+    const componentName = 'c:hiWorld';
+    const lightningEndPoint = 'https://bicx--dev.sandbox.my.site.com';
+    // Target element er dom element componenten skal henges på
+    const targetElement = 'lightning';
+    const componentAttributes = {};
       
-      $Lightning.use(
-        appName,
-        function() {
-          $Lightning.createComponent(
-            componentName,
-            componentAttributes,
-            targetElement,
-            function(cmp) {
-              console.log("LWC component was created");
-            }
-          );
-        };,
-        lightningEndPoint
+    $Lightning.use(
+      appName,
+      function() {
+        $Lightning.createComponent(
+          componentName,
+          componentAttributes,
+          targetElement,
+          function(cmp) {
+            console.log("LWC component was created");
+          }
         );
-    </script>
-  </body>
+      },
+      lightningEndPoint
+    );
+  </script>
+</body>
 </html>
     
