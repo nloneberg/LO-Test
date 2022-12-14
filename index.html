@@ -34,22 +34,27 @@
     const targetElement = 'lightning';
     const componentAttributes = {};
       
-    $Lightning.use(
-      appName,
-      function() {
-        $Lightning.createComponent(
-          componentName,
-          componentAttributes,
-          targetElement,
-          function(cmp) {
-            //lwc= cmp.elements[0];
-            console.log("LWC component was created");
-          }
-        );
-      },
-      lightningEndPoint,
-      ''
-    );
+    try{
+      $Lightning.use(
+        appName,
+        function() {
+          $Lightning.createComponent(
+            componentName,
+            componentAttributes,
+            targetElement,
+            function(cmp) {
+              //lwc= cmp.elements[0];
+              console.log("LWC component was created");
+            }
+          );
+        },
+        lightningEndPoint,
+        ''
+      );
+    }catch(error) {
+      console.log(error;
+    }
+ 
   </script>
 </body>
 </html>
