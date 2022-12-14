@@ -2,15 +2,29 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <title>Lightning Out Test</title>
 </head>
 <body>
+
+  <label for="productidinput">Product Id</label>
+  <input id="productidinput" type="text">
+
+  <button onclick="setNewId()">Add Product</button>
 
   <h1>Test</h1>
 
   <div id="lightning"></div>
   <script src="https://bicx--compoc.sandbox.my.site.com/comtest/lightning/lightning.out.js"></script>
   <script>
+
+    function setNewId(){
+      let value = document.getElementById('productidinput').value;
+      lwc.productId = value;
+      lwc.debugFromLWC('Du tastet inn: ' + value);
+    }
 
     const appName = 'c:LightningOutTest'; // aura app
     const componentName = 'c:hiWorld'; // lwc
